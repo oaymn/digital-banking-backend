@@ -4,6 +4,8 @@ import dev.oaymn.digitalbankingbackend.bankaccount.BankAccount;
 import dev.oaymn.digitalbankingbackend.common.AbstractEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
@@ -30,7 +32,8 @@ public class AccountOperation extends AbstractEntity<Long> {
     private BigDecimal amount;
 
     @ManyToOne(optional = false)
-    @JoinColumn(nullable = false, updatable = false)
+    @JoinColumn(updatable = false)
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private BankAccount account;
 
     @CreatedDate
