@@ -1,0 +1,25 @@
+name: digital-banking
+
+services:
+    mysql-digital-banking:
+        image: mysql:8.0.31
+        container_name: mysql-digital-banking
+        restart: unless-stopped
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_ROOT_PASSWORD: password
+            MYSQL_DATABASE: digital-banking-db
+            MYSQL_USER: dev
+            MYSQL_PASSWORD: password
+        volumes:
+            - type: volume
+              source: mysql-digital-banking-data
+              target: /var/lib/mysql
+
+volumes:
+    mysql-digital-banking-data:
+        name: mysql-digital-banking-data
+
+
+
