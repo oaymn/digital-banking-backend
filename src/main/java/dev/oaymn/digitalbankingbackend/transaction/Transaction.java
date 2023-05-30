@@ -1,4 +1,4 @@
-package dev.oaymn.digitalbankingbackend.operation;
+package dev.oaymn.digitalbankingbackend.transaction;
 
 import dev.oaymn.digitalbankingbackend.bankaccount.BankAccount;
 import dev.oaymn.digitalbankingbackend.common.AbstractEntity;
@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class AccountOperation extends AbstractEntity<Long> {
+public class Transaction extends AbstractEntity<Long> {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,7 +26,7 @@ public class AccountOperation extends AbstractEntity<Long> {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, updatable = false)
-    private OperationType type;
+    private TransactionType type;
 
     @Column(nullable = false, updatable = false)
     private BigDecimal amount;
@@ -36,8 +36,12 @@ public class AccountOperation extends AbstractEntity<Long> {
     @OnDelete(action = OnDeleteAction.CASCADE)
     private BankAccount account;
 
+    @Column(updatable = false)
+    private String description;
+
     @CreatedDate
     @Setter(AccessLevel.NONE)
-    private LocalDateTime dateTime;
+    @Column(updatable = false)
+    private LocalDateTime timestamp;
 
 }
