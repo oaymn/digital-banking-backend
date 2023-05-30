@@ -27,12 +27,14 @@ public class BankAccount extends AbstractEntity<Long> {
     @Setter(AccessLevel.NONE)
     private Long id;
 
+    @Column(nullable = false)
     private BigDecimal balance;
 
-    @Column(nullable = false)
+    @Column(nullable = false, updatable = false)
     private String currency;
 
     @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
     private AccountStatus status;
 
     @ManyToOne(optional = false)
@@ -42,10 +44,12 @@ public class BankAccount extends AbstractEntity<Long> {
 
     @CreatedDate
     @Setter(AccessLevel.NONE)
+    @Column(nullable = false)
     private LocalDateTime createdAt;
 
     @LastModifiedDate
     @Setter(AccessLevel.NONE)
+    @Column(nullable = false)
     private LocalDateTime updatedAt;
 
     @Override
