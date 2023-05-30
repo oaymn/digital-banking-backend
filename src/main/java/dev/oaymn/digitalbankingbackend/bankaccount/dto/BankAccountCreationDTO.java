@@ -1,6 +1,6 @@
 package dev.oaymn.digitalbankingbackend.bankaccount.dto;
 
-import dev.oaymn.digitalbankingbackend.common.validationGroups.OnCreate;
+import dev.oaymn.digitalbankingbackend.common.validationgroups.OnCreate;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
 
