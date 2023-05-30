@@ -109,3 +109,6 @@ buildNumber.properties
 *_BASE_*.txt
 *_LOCAL_*.txt
 *_REMOTE_*.txt
+
+# Development profile properties
+application-dev.yml
