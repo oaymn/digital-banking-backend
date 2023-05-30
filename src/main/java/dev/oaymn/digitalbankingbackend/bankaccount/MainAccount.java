@@ -1,6 +1,5 @@
 package dev.oaymn.digitalbankingbackend.bankaccount;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
@@ -16,7 +15,6 @@ import java.math.BigDecimal;
 @Data
 public class MainAccount extends BankAccount {
 
-    @Column(nullable = false)
     private BigDecimal overDraft;
 
     @Override
