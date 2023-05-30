@@ -1,7 +1,7 @@
 package dev.oaymn.digitalbankingbackend.bankaccount.dto;
 
-import dev.oaymn.digitalbankingbackend.common.validationGroups.OnMainAccountUpdate;
-import dev.oaymn.digitalbankingbackend.common.validationGroups.OnSavingAccountUpdate;
+import dev.oaymn.digitalbankingbackend.bankaccount.dto.validationGroups.OnMainAccountUpdate;
+import dev.oaymn.digitalbankingbackend.bankaccount.dto.validationGroups.OnSavingAccountUpdate;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PositiveOrZero;
 import lombok.Builder;
