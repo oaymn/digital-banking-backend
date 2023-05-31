@@ -2,7 +2,6 @@ package dev.oaymn.digitalbankingbackend.common.exception.handler;
 
 import com.mysql.cj.util.StringUtils;
 import dev.oaymn.digitalbankingbackend.common.exception.*;
-import dev.oaymn.digitalbankingbackend.common.exception.handler.dto.ExceptionResponse;
 import dev.oaymn.digitalbankingbackend.common.exception.runtime.BusinessException;
 import dev.oaymn.digitalbankingbackend.common.exception.runtime.ElementAlreadyExistsException;
 import dev.oaymn.digitalbankingbackend.common.exception.runtime.ElementNotFoundException;

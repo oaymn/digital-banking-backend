@@ -1,4 +1,4 @@
-package dev.oaymn.digitalbankingbackend.common.exception.handler.dto;
+package dev.oaymn.digitalbankingbackend.common.exception.handler;
 
 import lombok.Builder;
 
